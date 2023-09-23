@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "https://github.com/Mzhach",
+  "identity": "Mzhach.ServiceTemplate",
+  "name": "Service template",
+  "shortName": "mzservice",
+  "description": "Empty template for C# service with onion architecture",
+  "sourceName": "ServiceTemplate",
+  "tags": {
+    "language": "C#",
+    "type": "solution"
+  },
+  "sources": [
+	{
+		"exclude": [
+			".git/**",
+			".template.config/**",
+			".vs/**",
+			".vscode/**",
+			".idea/**",
+			"**/[Bb]in/**",
+			"**/[Oo]bj/**",
+			"**/*.user",
+			"README.md"
+		]
+	}
+  ]
+}
