@@ -4,4 +4,8 @@
         <TargetFramework>net7.0</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\ServiceTemplate.Application\ServiceTemplate.Application.csproj" />
+    </ItemGroup>
+
 </Project>

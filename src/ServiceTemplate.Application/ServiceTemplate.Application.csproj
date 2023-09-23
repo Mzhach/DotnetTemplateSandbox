@@ -3,6 +3,10 @@
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
     </PropertyGroup>
+    
+    <ItemGroup>
+        <InternalsVisibleTo Include="ServiceTemplate.Application.UnitTests" />
+    </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\ServiceTemplate.Domain\ServiceTemplate.Domain.csproj" />
