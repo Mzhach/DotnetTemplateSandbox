@@ -1,5 +1,4 @@
 <Project>
-    
     <PropertyGroup>
         <Nullable>disable</Nullable>
         <ImplicitUsings>disable</ImplicitUsings>
@@ -9,5 +8,4 @@
     <ItemGroup>
         <PackageReference Include="JetBrains.Annotations" />
     </ItemGroup>
-    
 </Project>
