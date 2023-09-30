@@ -17,9 +17,14 @@ max_line_length = 120
 # File Extension Settings
 ##########################################
 
-# Markdown Files
+# Markdown files
 [*.md]
 trim_trailing_whitespace = false
+
+# JSON files
+[*.json]
+indent_style = space
+indent_size = 2
 
 [*.cs]
 
