@@ -1,15 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
-    </PropertyGroup>
-    
-    <ItemGroup>
-        <InternalsVisibleTo Include="ServiceTemplate.Application.UnitTests" />
-    </ItemGroup>
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+	</PropertyGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\ServiceTemplate.Domain\ServiceTemplate.Domain.csproj" />
-    </ItemGroup>
+	<ItemGroup>
+		<InternalsVisibleTo Include="ServiceTemplate.Application.UnitTests"/>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\ServiceTemplate.Domain\ServiceTemplate.Domain.csproj"/>
+	</ItemGroup>
 
 </Project>

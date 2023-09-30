@@ -8,42 +8,44 @@ using Serilog.Formatting.Json;
 using ServiceTemplate.Api.Infrastructure;
 
 Log.Logger = new LoggerConfiguration()
-    .WriteTo.Console(new JsonFormatter())
-    .CreateBootstrapLogger();
+	.WriteTo.Console(new JsonFormatter())
+	.CreateBootstrapLogger();
 
 try
 {
-    Log.Information("Starting web application");
-    
-    var builder = WebApplication.CreateBuilder(args)
-        .SetupConfiguration()
-        .SetupLogging();
+	Log.Information("Starting web application");
 
-    builder.Services.AddControllers();
-    builder.Services.AddEndpointsApiExplorer();
-    builder.Services.AddSwaggerGen();
+	var builder = WebApplication.CreateBuilder(args)
+		.SetupConfiguration()
+		.SetupLogging();
 
-    var app = builder.Build();
+	builder.Services.AddControllers();
+	builder.Services.AddEndpointsApiExplorer();
+	builder.Services.AddSwaggerGen();
 
-    if (app.Environment.IsDevelopment())
-    {
-        app.UseSwagger();
-        app.UseSwaggerUI();
-    }
+	var app = builder.Build();
 
-    app.UseSerilogRequestLogging();
-    app.MapControllers();
+	if (app.Environment.IsDevelopment())
+	{
+		app.UseSwagger();
+		app.UseSwaggerUI();
+	}
 
-    app.Run();
+	app.UseSerilogRequestLogging();
+	app.MapControllers();
+
+	app.Run();
 }
 catch (Exception ex)
 {
-    Log.Fatal(ex, "Application terminated unexpectedly");
+	Log.Fatal(ex, "Application terminated unexpectedly");
 }
 finally
 {
-    Log.CloseAndFlush();
+	Log.CloseAndFlush();
 }
 
 [UsedImplicitly]
-public partial class Program {}
+public partial class Program
+{
+}

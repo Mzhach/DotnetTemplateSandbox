@@ -4,8 +4,8 @@ namespace ServiceTemplate.Application.UnitTests;
 
 public class UnitTest
 {
-    [Fact]
-    public void Test()
-    {
-    }
+	[Fact]
+	public void Test()
+	{
+	}
 }

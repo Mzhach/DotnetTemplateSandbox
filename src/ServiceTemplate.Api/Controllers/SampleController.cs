@@ -7,16 +7,13 @@ namespace ServiceTemplate.Api.Controllers;
 [Route("[controller]")]
 public class SampleController : ControllerBase
 {
-    private readonly ILogger<SampleController> _logger;
+	private readonly ILogger<SampleController> _logger;
 
-    public SampleController(ILogger<SampleController> logger)
-    {
-        _logger = logger;
-    }
+	public SampleController(ILogger<SampleController> logger)
+	{
+		_logger = logger;
+	}
 
-    [HttpGet]
-    public IActionResult Ping()
-    {
-        return Ok("Pong");
-    }
+	[HttpGet]
+	public IActionResult Ping() => Ok("Pong");
 }
