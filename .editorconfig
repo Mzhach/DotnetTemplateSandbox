@@ -100,7 +100,7 @@ csharp_style_prefer_range_operator = true:warning
 csharp_style_throw_expression = true:warning
 csharp_style_conditional_delegate_call = true:warning
 # Code block preferences
-csharp_prefer_braces = true:warning
+csharp_prefer_braces = when_multiline:warning
 csharp_prefer_simple_using_statement = true:suggestion
 # 'using' directive preferences
 csharp_using_directive_placement = outside_namespace:warning
@@ -173,6 +173,40 @@ csharp_space_between_square_brackets = false
 # https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-formatting-conventions#wrap-options
 csharp_preserve_single_line_statements = false
 csharp_preserve_single_line_blocks = true
+
+# Resharper options
+# https://www.jetbrains.com/help/resharper/Using_EditorConfig.html
+
+# EditorConfig properties for C#: Blank Lines
+# https://www.jetbrains.com/help/resharper/EditorConfig_CSHARP_BlankLinesPageScheme.html
+resharper_csharp_blank_lines_inside_region = 0
+resharper_csharp_keep_blank_lines_in_declarations = 1
+resharper_csharp_remove_blank_lines_near_braces_in_declarations = true
+resharper_csharp_blank_lines_after_using_list = 1
+resharper_csharp_blank_lines_inside_namespace = 0
+resharper_csharp_blank_lines_after_file_scoped_namespace_directive = 1
+resharper_csharp_blank_lines_around_type = 1
+resharper_csharp_blank_lines_around_invocable = 1
+resharper_csharp_blank_lines_before_multiline_statements = 1
+resharper_csharp_blank_lines_after_multiline_statements = 1
+
+# EditorConfig properties for C#: Line Breaks
+# https://www.jetbrains.com/help/resharper/EditorConfig_CSHARP_LineBreaksPageSchema.html
+resharper_csharp_wrap_object_and_collection_initializer_style = chop_always
+
+# EditorConfig properties for C#: Tabs, Indents, Alignment
+# https://www.jetbrains.com/help/resharper/EditorConfig_CSHARP_CSharpIndentStylePageSchema.html
+resharper_csharp_indent_preprocessor_if = usual_indent
+resharper_csharp_indent_preprocessor_region = usual_indent
+resharper_csharp_indent_preprocessor_other = usual_indent
+
+# EditorConfig properties for XMLDOC: Formatting Style
+# https://www.jetbrains.com/help/resharper/EditorConfig_XMLDOC_XmlDocCodeStylePageSchema.html
+resharper_xmldoc_indent_style = tab
+resharper_xmldoc_keep_user_linebreaks = true
+resharper_xmldoc_linebreaks_inside_tags_for_multiline_elements = true
+resharper_xmldoc_indent_child_elements = one_indent
+resharper_xmldoc_indent_text = zero_indent
 
 ##########################################
 # .NET Naming Rules
