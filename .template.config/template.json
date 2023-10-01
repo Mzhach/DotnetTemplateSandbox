@@ -11,18 +11,18 @@
     "type": "solution"
   },
   "sources": [
-	{
-		"exclude": [
-			".git/**",
-			".template.config/**",
-			".vs/**",
-			".vscode/**",
-			".idea/**",
-			"**/[Bb]in/**",
-			"**/[Oo]bj/**",
-			"**/*.user",
-			"README.md"
-		]
-	}
+  {
+    "exclude": [
+      ".git/**",
+      ".template.config/**",
+      ".vs/**",
+      ".vscode/**",
+      ".idea/**",
+      "**/[Bb]in/**",
+      "**/[Oo]bj/**",
+      "**/*.user",
+      "README.md",
+    ]
+  }
   ]
 }
