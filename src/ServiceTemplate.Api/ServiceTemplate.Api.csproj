@@ -3,6 +3,8 @@
 	<PropertyGroup>
 		<TargetFramework>net7.0</TargetFramework>
 		<UserSecretsId>4dd64f52-127f-4ebf-ab48-674ea1f55fe6</UserSecretsId>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>$(NoWarn);1591</NoWarn>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -10,6 +12,8 @@
 		<PackageReference Include="Serilog.Enrichers.Environment"/>
 		<PackageReference Include="Serilog.Enrichers.Thread"/>
 		<PackageReference Include="Swashbuckle.AspNetCore"/>
+		<PackageReference Include="Swashbuckle.AspNetCore.Annotations"/>
+		<PackageReference Include="Swashbuckle.AspNetCore.Filters"/>
 	</ItemGroup>
 
 	<ItemGroup>

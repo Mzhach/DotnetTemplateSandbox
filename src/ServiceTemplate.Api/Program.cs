@@ -4,8 +4,10 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 using Serilog.Formatting.Json;
+using ServiceTemplate.Api.Helpers;
 using ServiceTemplate.Api.Infrastructure.Configuration;
 using ServiceTemplate.Api.Infrastructure.Logging;
+using ServiceTemplate.Api.Infrastructure.Swagger;
 using ServiceTemplate.Application;
 
 Log.Logger = new LoggerConfiguration()
@@ -20,17 +22,18 @@ try
 	builder.AddConfiguration();
 	builder.ConfigureLogging();
 
+	var configurationHelper = new ConfigurationHelper(builder.Configuration);
+
 	builder.Services.AddControllers();
-	builder.Services.AddSwaggerGen();
 	builder.Services.AddApplicationServices();
+
+	if (configurationHelper.IsSwaggerEnabled)
+		builder.Services.AddSwagger();
 
 	var app = builder.Build();
 
-	if (app.Environment.IsDevelopment())
-	{
+	if (configurationHelper.IsSwaggerEnabled)
 		app.UseSwagger();
-		app.UseSwaggerUI();
-	}
 
 	app.UseLogging();
 	app.MapControllers();

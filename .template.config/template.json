@@ -22,6 +22,8 @@
       "**/[Oo]bj/**",
       "**/*.user",
       "README.md",
+      "src/ServiceTemplate.Api/Controllers/**",
+      "src/ServiceTemplate.Api/Models/**"
     ]
   }
   ]
